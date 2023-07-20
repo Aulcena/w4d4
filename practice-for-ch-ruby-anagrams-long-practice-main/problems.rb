@@ -30,3 +30,21 @@ end
 
 p second_anagram?("gizmo", "sally")    #=> false
 p second_anagram?("elvis", "lives")    #=> true
+
+# Use bubble-sort algorithm
+
+def third_anagram?(str_1,str_2)
+    alphabet = ("a".."z").to_a
+
+    i = 0 
+
+    sorted = false
+
+    while !sorted
+
+        sorted = true
+
+        str[i]
+    end
+
+end
