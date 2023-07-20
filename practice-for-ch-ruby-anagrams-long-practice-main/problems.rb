@@ -1,4 +1,4 @@
-def anagram?(str_1, str_2)
+def first_anagram?(str_1, str_2)
     hs = Hash.new(0)
     
     str_1.each_char do |char|
@@ -14,5 +14,19 @@ def anagram?(str_1, str_2)
     
 end
 
-p anagram?("gizmo", "sally")    #=> false
-p anagram?("elvis", "lives")    #=> true
+
+
+def second_anagram?(str_1, str_2)
+    str_1.each_char do |char|
+        if str_2.include?(char)
+            found = str_2.index(char)
+            str_2 =  str_2[0...found] + str_2[found+1..-1]
+        else
+            return false
+        end
+    end
+    str_2.empty?
+end
+
+p second_anagram?("gizmo", "sally")    #=> false
+p second_anagram?("elvis", "lives")    #=> true
