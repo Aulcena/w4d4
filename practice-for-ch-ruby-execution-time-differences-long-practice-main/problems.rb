@@ -82,6 +82,26 @@ def largest_contiguous_sub_sum(array)
     largest_sum
 end
 
+# def largest_contiguous_sub_sum(array)
+#     left =0
+#     right = 0
+#     cur_sum =0
+#     largest_sum =0
+
+#     while left < array.length
+#         right = left
+#         while cur_sum >0
+#             cur_sum += array[right]
+#             if cur_sum > largest_sum
+#                 largest_sum = cur_sum
+#             end
+#             right +=1
+#         end
+#         left +=1
+#     end
+#     largest_sum
+# end
+
 list = [5, 3, -7]
 p largest_contiguous_sub_sum(list) # => 8
 
